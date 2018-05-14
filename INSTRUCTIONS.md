@@ -9,7 +9,7 @@ Para rodar a aplicação é necessário o Redis Server (https://redis.io/), para
 Para rodar a aplicação siga os passos abaixo:
 
 1 - Realize o clone do projeto
-> git clone <url do projeto>
+> git clone (url do projeto)
 
 2 - Atualize as dependências do projeto
 > bundle install
