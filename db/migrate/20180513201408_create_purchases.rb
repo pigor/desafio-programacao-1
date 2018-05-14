@@ -5,6 +5,7 @@ class CreatePurchases < ActiveRecord::Migration[5.1]
       t.belongs_to :item, foreign_key: true
       t.integer :quantity
       t.belongs_to :merchant, foreign_key: true
+      t.float :total
 
       t.timestamps
     end

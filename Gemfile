@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'sidekiq'
+gem 'foreman'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'pry-rails'

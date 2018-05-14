@@ -9,6 +9,21 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <div class="main">
+            <%= yield %>
+            <%= render 'shared/flash_message' %>
+            <div class="result">
+              <h2>Receita Bruta Total</h2>
+              <p><%= "(atualizado em #{Time.zone.now.strftime('%d/%M/%Y %H:%M:%S')})" %></p>
+              <h3><%= number_to_currency @amount, unit: "R$ " %></h3>
+              <button id="update-button" class="button button-outline">Atualizar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

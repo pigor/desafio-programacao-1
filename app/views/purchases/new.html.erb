@@ -1,0 +1,10 @@
+<div class="purchase-main">
+  <h1>Arquivo de Vendas</h1>
+  <%= form_tag purchases_path, multipart: true do %>
+    <fieldset>
+      <label for="file">Selecione o arquivo para processamento</label>
+      <%= file_field_tag :file %>
+      <%= submit_tag 'Processar', id: 'submit-file', class: "button-primary" %>
+    </fieldset>
+  <% end %>
+</div>

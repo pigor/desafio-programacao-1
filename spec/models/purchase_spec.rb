@@ -5,6 +5,7 @@ RSpec.describe Purchase, type: :model do
   it { should validate_presence_of :merchant_id }
   it { should validate_presence_of :item_id }
   it { should validate_presence_of :quantity }
+  it { should validate_presence_of :total }
 
   it { should belong_to :purchaser }
   it { should belong_to :merchant }

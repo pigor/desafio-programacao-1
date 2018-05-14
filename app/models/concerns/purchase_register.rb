@@ -9,11 +9,16 @@ class PurchaseRegister
         purchaser_id: purchaser.id, 
         merchant_id: merchant.id, 
         item_id: item.id,
-        quantity: params["purchase_count"]
+        quantity: params["purchase_count"],
+        total: total_purchase(item, params["purchase_count"])
       })
     end
 
     private
+
+    def total_purchase(item, quantity)
+      item.price * quantity.to_i
+    end
 
     def find_or_create_purchaser(name)
       purchaser = Purchaser.find_by_name name
