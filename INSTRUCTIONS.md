@@ -16,6 +16,7 @@ Para rodar a aplicação siga os passos abaixo:
 
 3 - Configure o banco de dados
 > rake db:create
+
 > rake db:migrate
 
 4 - Execute os servidores e serviçoes (Redis, Sidekiq e Puma) para acessar a aplicação
