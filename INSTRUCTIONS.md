@@ -1,10 +1,10 @@
-# Solução
+# Instruções
 
 ## Pré-requisitos
 
 Para rodar a aplicação é necessário o Redis Server (https://redis.io/), para instalá-lo é só seguir a documentação no site oficial da ferramenta que pode ser acessado pelo link acima.
 
-## Instruções
+## Passo a Passo
 
 Para rodar a aplicação siga os passos abaixo:
 
