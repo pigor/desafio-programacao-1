@@ -4,8 +4,13 @@ class PurchasesController < ApplicationController
   end
   
   def create
-    PurchaseWorker.perform_async(params[:file].tempfile.path)
+    begin
+      PurchaseWorker.perform_async(params[:file].tempfile.path)
 
-    redirect_to root_path, notice: 'Iniciado o processamento do arquivo...'
+      redirect_to root_path, notice: 'Iniciado o processamento do arquivo...'
+    rescue
+      flash[:error] = 'Ocorreu um erro ao tentar processar o arquivo!'
+      redirect_to root_path
+    end
   end
 end
